@@ -1,0 +1,178 @@
+<html>
+<head>
+    <title>Patient Registration Form</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'pt_details/style2.css' %}">
+    <link rel="stylesheet" href="{% static 'pt_details/style1.css' %}">
+</head>
+
+<body class="bgimg">
+<div class="menu">
+  <ul>
+    <li class="logo"><img src="{% static 'pt_details/3.png' %}"></li>
+    <li><a href="/home" class="form">Home</a></li>
+    <li><a href="/apt" class="form">Patient Details</a></li>
+    <li class="active">Admit Form</li>
+    <li><a href="/srh" class="form">Search</a></li>
+    <li><a href="/about" class="form">About</a></li>
+    <li> Hello, {{user.username}} </li>
+    <li><a href="/logout" class="lgn-btn">Logout</a></li>
+  </ul> 
+</div>
+
+<form action="#" method = "post">
+
+  {% csrf_token %}
+
+
+<h2>VIP HOSPITALS</h2>
+<h3>PAIENT REGISTRATION FORM</h3>
+
+ 
+<table align="center" cellpadding = "10">
+ 
+<!----- First Name ---------------------------------------------------------->
+<tr>
+<td>FIRST NAME</td>
+<td><input type="text" name="First_Name" maxlength="20" placeholder="First Name">
+<br>(max 20 characters a-z and A-Z)
+</td>
+
+ 
+<!----- Last Name ---------------------------------------------------------->
+
+<td>LAST NAME</td>
+<td><input type="text" name="Last_Name" maxlength="20" placeholder="Last Name">
+<br>(max 20 characters a-z and A-Z)
+</td>
+</tr>
+
+<!-----Father Name ----------------------------------------------->
+<tr>
+<td>FATHER'S NAME</td>
+<td><input type="text" name="Father_Name" maxlength="30" placeholder="Father Name">
+</td>
+<td></td>
+<td></td>
+</tr>
+ 
+<!----- Date Of Birth -------------------------------------------------------->
+<tr>
+<td>DATE OF BIRTH</td>
+ 
+<td>
+<input type='Date' name="DOB">
+<br>(DD/MM/YYYY)
+</td>
+
+
+<!----- Gender ----------------------------------------------------------->
+
+<td>GENDER</td>
+<td>
+Male <input type="radio" name="Gender" value="Male" checked>
+Female <input type="radio" name="Gender" value="Female" >
+Other<input type="radio" name="Gender" value="Other">
+</td>
+</tr>
+
+<!-------Height--------------------------------------------------->
+<tr>
+<td>HEIGHT</td>
+<td>
+  <input type="text" name="Height" placeholder="in cms">
+</td>
+
+
+<!-------Weight------------------------------------------------------>
+
+<td>WEIGHT</td>
+<td>
+  <input type="text" name="Weight" placeholder="in Kgs">
+</td>
+</tr>
+
+<!--------Marital Status----------------------------------------->
+<tr>
+  <td>MARITAL STATUS</td>
+  <td>
+    <select name="Marital_Status">
+      <option value="SINGLE">SINGLE</option>
+      <option value="MARRIED">MARRIED</option>
+      <option value="SEPARATED">SEPARATED</option>
+    </select>
+  </td>
+  <td></td>
+  <td></td>
+</tr>
+
+<!----- Email Id ---------------------------------------------------------->
+<tr>
+<td>EMAIL ID</td>
+<td><input type="email" name="Email_Id" maxlength="50" placeholder="Valid Email"></td>
+
+ 
+<!----- Mobile Number -------------------------------------------------------->
+
+<td>MOBILE NUMBER</td>
+<td>
+<input type="text" name="Mob_No" maxlength="13" value='+91'>
+(10 digit number)
+</td>
+</tr>
+ 
+<!----- Address ---------------------------------------------------------->
+<tr>
+  <td>ADDRESS <br /><br /><br /></td>
+  <td><textarea name="Address" rows="4" cols="30"></textarea></td>
+  <td></td>
+  <td></td>
+</tr>
+
+<!----- City ---------------------------------------------------------->
+<tr>
+<td>CITY</td>
+<td><input type="text" name="City" maxlength="20" placeholder="City">
+<br>(max 30 characters a-z and A-Z)
+</td>
+
+ 
+<!----- Pin Code ---------------------------------------------------------->
+
+<td>PIN CODE</td>
+<td><input type="text" name="Pin_Code" maxlength="6" placeholder="Area PIN Code">
+<br>(6 digit number)
+</td>
+</tr>
+ 
+<!----- State ---------------------------------------------------------->
+<tr>
+<td>STATE</td>
+<td><input type="text" name="State" maxlength="20" placeholder="State">
+<br>(max 30 characters a-z and A-Z)
+</td>
+
+ 
+<!----- Country ---------------------------------------------------------->
+
+<td>COUNTRY</td>
+<td><input type="text" name="Country" value="India" readonly="readonly"></td>
+</tr>
+
+ 
+<!----- Submit and Reset ------------------------------------------------->
+<tr>
+  <td colspan="2" align="center">
+    <input type="submit" value="Submit" class="sub">
+  </td>
+  <td colspan="2" align="center">
+    <input type="reset" value="Reset" class="rst"></td>
+</tr>
+</table>
+
+<p align="center"> For any emergency call 108 or Contact to VIP Emergency Ward +91-XXXXXXXX00</p>
+ 
+</form>
+ 
+</body>
+</html>

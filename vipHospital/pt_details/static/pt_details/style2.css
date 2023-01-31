@@ -1,0 +1,56 @@
+h3,h2{
+  font-family: ; 
+  font-size: 15pt;
+  font-weight: bold; 
+  color: #12dafa;
+  text-align: center; 
+  text-decoration: underline
+}
+.bgimg{
+  background-image: linear-gradient(to top right,#004e95 50%,#013A6b 50%);
+}
+
+table{
+  font-family: cursive;
+  background: none;
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  border: 2px solid navy;
+  border-radius: 20px;
+}
+table.inner{
+  border: 0px
+}
+p{
+  font-family: Calibri;
+  color:white; 
+  font-size: 11pt; 
+  font-style: normal;
+  font-weight: bold;
+  background-color: #2d85b0;
+  border: 2px solid navy;
+}
+
+input{
+  border: 2px solid #19dafa;
+  border-radius: 4px;
+  padding: 8px 5px;
+}
+
+.sub,.rst{
+  width: 200px;
+  padding: 7px;
+  color: #fff;
+  background: #08C021;
+  font-style: italic;
+  font-size: 16px;
+  font-family: serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+}
+
+.rst{
+  background: red !important;
+}

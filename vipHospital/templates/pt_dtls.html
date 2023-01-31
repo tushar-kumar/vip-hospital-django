@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>VIP HOSPITAL</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'pt_details/style1.css' %}">
+	
+</head>
+<body class="bgimg">
+<div class="menu">
+	<ul>
+		<li class="logo"><img src="{% static 'pt_details/3.png' %}"></li>
+		<li class="active">Home</li>
+		<li><a href="/apt" class="form">Patient Details</li>
+		<li><a href="/reg" class="form">Admit Form</a></li>
+		<li><a href="/srh" class="form">Search</a></li>
+		<li><a href="/about" class="form">About</a></li>
+		<li><a href="/logout" class="lgn-btn">Logout</a></li>
+	</ul>	
+</div>
+
+<div class="text">
+	<h3>Hello, {{user.username}}</h3>
+	<h1>+ VIP HOSPITAL'S +</h1>
+	<p>YOUR HEALTH IS OUR RESPONSIBLITY</p>
+	<p> Welcome to our HOSPITAL<br>
+	Your health is very important for us we always<br> tries to give our best for your comfort.<br>
+	To fill admit form of Patient 
+	<a href='/reg'> Click Here </a>
+	</p>
+</div>
+<div class="bimg"><img src="{% static 'pt_details/11.png' %}" height="510" width="700"></div>
+
+
+</body>
+</html>

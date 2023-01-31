@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title>Appointments</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'pt_details/style1.css' %}">
+
+<style type="text/css">
+
+ol{
+	font-size: 18px;
+	line-height: 30px;
+  color: #919191;
+  margin-left: 70px;
+}
+
+h2{
+	margin-left: 50px;
+	color: #fff;
+}
+
+</style>
+</head>
+<body class="bgimg">
+
+<div class="menu">
+	<ul>
+		<li class="logo"><img src="{% static 'pt_details/3.png' %}"></li>
+		<li><a href="/home" class="form">Home</a></li>
+		<li class="active">Patient Details</li>
+		<li><a href="/reg" class="form">Admit Form</a></li>
+		<li><a href="/srh" class="form">Search</a></li>
+		<li><a href="/about" class="form">About</a></li>
+		<li><a href="/logout" class="lgn-btn">Logout</a></li>
+	</ul>	
+</div>
+
+<div class="text">
+<h3>Hello, {{user.username}}</h3>
+<h2>Appointments of the Patients</h2>
+		<ol>
+	{% for pt in Patients %}
+	
+			<li>{{ pt.First_Name }} {{ pt.Last_Name }}</li>
+		
+	{% endfor %}
+		</ol>
+</div>
+
+<div class="bimg"><img src="{% static 'pt_details/11.png' %}" height="510" width="700"></div>
+
+</body>
+</html>

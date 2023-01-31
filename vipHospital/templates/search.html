@@ -1,0 +1,59 @@
+<html>
+<head>
+	<title>VIP HOSPITAL</title>
+	{% load static %}
+	<link rel="stylesheet" href="{% static 'pt_details/style1.css' %}">
+	<link rel="stylesheet" href="{% static 'pt_details/style2.css' %}">
+	
+</head>
+<body class="bgimg">
+<div class="menu">
+	<ul>
+		<li class="logo"><img src="{% static 'pt_details/3.png' %}"></li>
+		<li><a href="/home" class="form">Home</a></li>
+		<li><a href="/apt" class="form">Patient Details</li>
+		<li><a href="/reg" class="form">Admit Form</a></li>
+		<li class="active">Search</li>
+        <li><a href="/about" class="form">About</a></li>
+		<li><a href="/logout" class="lgn-btn">Logout</a></li>
+	</ul>	
+</div>
+
+<h1 align="center"> Search Patient's Information</h1>
+<form method="POST" action="#">
+{% csrf_token %}
+<center>
+<input type="text" name="srh" placeholder="Enter First Name">
+<input type="submit" value="Search" class="sub">
+</center>
+</form>
+<div>
+{% if messages %}
+    <ul>
+        {% for k in messages %}
+           <li>{{ k }}</li>
+        {% endfor %}
+     </ul>
+{% endif %}  
+</div>
+<div>
+{% if sr %}
+    {% for k in sr %}
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td>{{k.First_Name}} {{k.Last_Name}}</td>
+        </tr>
+        <tr>
+            <td>Date of Birth: </td>
+            <td>{{k.DOB}}</td>
+        </tr>
+        <tr>
+            <td>Gender: </td>
+            <td>{{k.Gender}}</td>
+        </tr>
+    </table>
+    <hr>
+    {% endfor %}
+{% endif %}
+    
